@@ -30,7 +30,7 @@ from simpletransformers.classification.transformer_models.roberta_model import R
 from simpletransformers.config.global_args import global_args
 
 class our_model(ClassificationModel):
-    def __init__(self, model_type, model_name, num_labels=None, weight=None, args=None, use_cuda=True, cuda_device=-1, **kwargs):
+    def __init__(self, model_type, model_name, num_labels=None, weight=None, args=None, use_cuda=False, cuda_device=-1, **kwargs):
         # super().__init__(model_type, model_name, num_labels, weight, args, use_cuda, cuda_device, **kwargs)
         MODEL_CLASSES = {
             "bert": (BertConfig, BertForSequenceClassification, BertTokenizer),
